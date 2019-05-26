@@ -19,7 +19,7 @@ try:
     TOML = toml.load(TOML_PATH)
     MQTT_ADDR_PORT = TOML['snips-common']['mqtt']
     MQTT_ADDR, MQTT_PORT = MQTT_ADDR_PORT.split(':')
-    MQTT_PORT = int(mqtt_port)
+    MQTT_PORT = int(MQTT_PORT)
 except (KeyError, ValueError):
     MQTT_ADDR = 'localhost'
     MQTT_PORT = 1883
